@@ -1,9 +1,9 @@
-package me.theosoch.histoire;
+package histoire;
 
-import me.theosoch.personnages.Commercant;
-import me.theosoch.personnages.Humain;
-import me.theosoch.personnages.Ronin;
-import me.theosoch.personnages.Yakuza;
+import personnages.Commercant;
+import personnages.Humain;
+import personnages.Ronin;
+import personnages.Yakuza;
 
 //
 

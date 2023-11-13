@@ -1,10 +1,8 @@
-package me.theosoch.personnages;
+package personnages;
 
 public class Samourai extends Ronin {
 	
-	private String seigneur;
-	
-	//	
+	private String seigneur;	
 	
 	public Samourai(String seigneur, String nom, String boissonFavorite, int argent) {
 		super(nom, boissonFavorite, argent);
@@ -16,15 +14,10 @@ public class Samourai extends Ronin {
 		init(seigneur);
 	}
 	
-	//
-	
 	private void init(String seigneur) {
 		this.seigneur = seigneur;
 	}
 
-	//
-	
-	@Override
 	public void direBonjour() {
 		super.direBonjour();
 		this.parler("Je suis fier de servir le seigneur " + this.seigneur + ".");

@@ -1,11 +1,9 @@
-package me.theosoch.personnages;
+package personnages;
 
 public class Yakuza extends Humain {
 
 	private String clan;
 	private int reputation;
-	
-	//
 	
 	public Yakuza(String nom, String boissonFavorite, int argent, String clan) {
 		this(nom, boissonFavorite, argent, clan, 0);
@@ -17,13 +15,9 @@ public class Yakuza extends Humain {
 		this.reputation = reputation;
 	}
 	
-	//
-	
 	public String getClan() { return this.clan; }
 	
 	public int getReputation() { return this.reputation; }
-	
-	//
 	
 	public void extorquer(Commercant victime) {
 		this.parler("Tiens, tiens, ne serait-ce pas un faible marchand qui passe par là ?");
@@ -34,8 +28,6 @@ public class Yakuza extends Humain {
 		this.gagnerArgent(argentExtorque);
 		this.parler("J’ai piqué les " + argentExtorque + " sous de " + victime.getNom() + ", ce qui me fait " + this.getArgent() + " sous dans ma poche. Hi ! Hi !");
 	}
-	
-	//
 	
 	public int perdre() {
 		int argent = this.getArgent();
@@ -52,12 +44,8 @@ public class Yakuza extends Humain {
 		this.parler("Ce ronin pensait vraiment battre " + this.getNom() + " du clan de " + this.getClan() + " ? Je l'ai dépouillé de ses " + gain + " sous.");
 	}
 	
-	//	
-	
-	@Override
 	public void direBonjour() {
 		super.direBonjour();
 		this.parler("Mon clan est celui de " + this.getClan() + ".");
 	}
-	
 }

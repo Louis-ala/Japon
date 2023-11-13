@@ -1,11 +1,11 @@
-package me.theosoch.histoire;
+package histoire;
 
-import me.theosoch.personnages.Commercant;
-import me.theosoch.personnages.GrandMere;
-import me.theosoch.personnages.Ronin;
-import me.theosoch.personnages.Samourai;
-import me.theosoch.personnages.Traitre;
-import me.theosoch.personnages.Yakuza;
+import personnages.Commercant;
+import personnages.GrandMere;
+import personnages.Ronin;
+import personnages.Samourai;
+import personnages.Traitre;
+import personnages.Yakuza;
 
 public class HistoireTP5 {
 

@@ -1,12 +1,10 @@
-package me.theosoch.personnages;
+package personnages;
 
 public class Commercant extends Humain {
 
 	public Commercant(String nom, int argent) {
 		super(nom, "thé", argent);
 	}
-	
-	//
 	
 	public int setFaireExtorquer() {
 		int argent = this.getArgent();

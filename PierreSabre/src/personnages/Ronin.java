@@ -1,4 +1,4 @@
-package me.theosoch.personnages;
+package personnages;
 
 public class Ronin extends Humain {
 
