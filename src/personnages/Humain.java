@@ -63,26 +63,31 @@ public class Humain {
 				this.connaissances[i] = this.connaissances[i+1];
 			}
 		}
+		
 		if(this.nbConnaissance < 30) {
-			this.connaissances[this.nbConnaissance - 1] = humainMemoriser;
+			this.connaissances[this.nbConnaissance] = humainMemoriser;
 			this.nbConnaissance += 1;
 		}
+		
 		else {
 			this.connaissances[this.nbConnaissance - 1] = humainMemoriser;
 		}
+		
 		return humainMemoriser;
 	}
 	
-	protected void faireConnaissanceAvec(Humain autreHumain) {
+	public void faireConnaissanceAvec(Humain autreHumain) {
 		this.direBonjour();
 		autreHumain.repondre(this);
 		this.memoriser(autreHumain);
 	}
 	
 	public void listerConnaissance() {
-		System.out.println(" Je connais beaucoup de monde dont : ");
+		StringBuilder texteBuilder = new StringBuilder();
+		texteBuilder.append("Je connais beaucoup de monde dont : ");
 		for(int i = 0; i < this.nbConnaissance; i++) {
-			System.out.println(" , " + this.connaissances[i]);
+			texteBuilder.append(this.connaissances[i].getNom() + " ");
 		}
+		this.parler(texteBuilder.toString());
 	}
 }
