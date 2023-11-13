@@ -3,10 +3,10 @@ import personnages.*;
 
 public class HistoireTP4 {
 	public static void main(String[] args) {
-		Humain ben = new Humain("ben", "Coca", 35);
-		Commercant patoche = new Commercant("patoche", "White Spirit", 25);
-		Yakuza marco = new Yakuza("marco", "Whiskey", 40, "Team Rocket");
-		Ronin kendo = new Ronin("kendo", "Water", 30);
+		Humain ben = new Humain("ben", "coca", 35);
+		Commercant marco = new Commercant("Marco", 20);
+		Yakuza yaku = new Yakuza("Yaku Le Noir", "whisky", 30, "Warsong");
+		Ronin roro = new Ronin("Roro", "shochu", 60);
 		
 		ben.direBonjour();
 		ben.acheter("Tableau", 25);
@@ -14,17 +14,16 @@ public class HistoireTP4 {
 		ben.acheter("Vase", 5);
 		ben.acheter("Coca bien frais", 10);
 	
-		patoche.direBonjour();
-		patoche.seFaireExtorquer();
-		patoche.recevoir(2);
-		patoche.boire();
-		
 		marco.direBonjour();
-		marco.extorquer(patoche);
+		marco.seFaireExtorquer();
+		marco.recevoir(2);
+		marco.boire();
 		
-		kendo.direBonjour();
-		kendo.donner(patoche);
+		yaku.direBonjour();
+		yaku.extorquer(marco);
 		
-		kendo.provoquer(marco);
+		roro.direBonjour();
+		roro.donner(marco);
+		roro.provoquer(yaku);
 	}
 }
