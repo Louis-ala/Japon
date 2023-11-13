@@ -10,6 +10,10 @@ public class Yakuza extends Humain {
 		this.reputation = 0;
 	}
 	
+	public String getClan() { 
+		return this.clan; 
+	}
+	
 	public void extorquer(Commercant victime) {
 		int argent = victime.getArgent();
 		
@@ -37,5 +41,11 @@ public class Yakuza extends Humain {
 		parler("J'ai gagné! J'suis trop le boss! ");
 		
 		return gain;
+	}
+	
+	@Override
+	public void direBonjour() {
+		super.direBonjour();
+		this.parler("Mon clan est celui de " + this.getClan() + ".");
 	}
 }
